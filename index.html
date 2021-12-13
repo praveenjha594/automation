@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+    <title>Automation</title>
+
+    <style>
+
+            body {
+                font-family: 'Lato', sans-serif
+            }
+
+            h1 {
+                margin-bottom: 40px
+            }
+
+            label {
+                color: #333
+            }
+
+            .btn-send {
+                font-weight: 300;
+                text-transform: uppercase;
+                letter-spacing: 0.2em;
+                width: 80%;
+                margin-left: 3px
+            }
+
+            .help-block.with-errors {
+                color: #ff5050;
+                margin-top: 5px
+            }
+
+            .card {
+                margin-left: 10px;
+                margin-right: 10px
+            }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="container"><div class=" text-center mt-5 ">
+            <h1>PINCODE MISMATCH AUTOMATION</h1>
+        </div>
+        <div class="row ">
+            <div class="col-lg-6 mx-auto">
+                <div class="card mt-2 mx-auto p-4 bg-light">
+                    <div class="card-body bg-light">
+                        <div class="container">
+                            <form id="contact-form" method="POST">
+                                <div class="controls">
+                                    
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group"> <label for="form_message">Enter the error message:</label> <textarea id="error" name="message" class="form-control" placeholder="Example: zipcode GB-BS17 is too narrow a......" rows="4" required="required" data-error="Please, leave us a message."></textarea> </div>
+                                        </div>
+
+                                        <div class="col-md-12">
+                                            <div class="form-group"> <label for="form_message">Enter the postal code:</label> <textarea id="pincode" name="message" class="form-control" placeholder="Example: ((geo=GB-BS17 OR geoip=GB-M6) OR (geo=GB-FY8 OR geo......" rows="4" required="required" data-error="Please, leave us a message."></textarea> </div>
+                                        </div>
+
+                                        <div class="col-md-12"> <input id="subm" type="button" onclick="execute()" class="btn btn-success btn-send pt-2 btn-block " value="Verify" > </div>
+                                    </div>
+
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div> <!-- /.8 -->
+            </div>
+            <div class="col-lg-6">
+                <div class="card mt-2 mx-auto p-4 bg-light">
+                    <div class="card-body bg-light">
+                        <div class="container">
+                            <form id="contact-form" method="POST">
+                                <div class="controls">
+                                    
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group"> <label for="form_message">Output:</label> <textarea id="output" name="message" class="form-control" placeholder="" rows="10" readonly></textarea> </div>
+                                        </div>
+                                        <div class="col-md-12"> <input id="subm" type="button" onclick="copyToClipboard()" class="btn btn-success btn-send pt-2 btn-block " value="Copy to Clipboard" > </div>
+                                    </div>
+
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- /.row-->
+        </div>
+
+    </div>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
+
+
+
+
